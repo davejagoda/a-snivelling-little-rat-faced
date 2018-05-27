@@ -11,7 +11,10 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y python3-pip
 pip3 install pipenv
+
+# pipenv install and add github SSH key to avoid warning
 su - vagrant -c 'cd /vagrant && pipenv install'
+su - vagrant -c 'ssh -o "StrictHostKeyChecking no" -T git@github.com'
 HEREDOC
 
 HOSTNAME = 'dulwich'
