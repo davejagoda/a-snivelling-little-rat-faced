@@ -8,7 +8,8 @@ from dulwich import porcelain
 import datetime
 import os
 
-def checkout_branch(branch_name):
+def pull_branch(branch_name):
+    porcelain.pull(REPO_PATH, URL, branch_name.encode())
     porcelain.update_head(REPO_PATH, branch_name)
 
 def update_branch(file_name):
@@ -25,6 +26,6 @@ def push_branch(branch_name):
     porcelain.push(REPO_PATH, URL, branch_name.encode())
 
 if '__main__' == __name__:
-    checkout_branch(BRANCH_NAME)
+    pull_branch(BRANCH_NAME)
     update_branch('{}.log'.format(BRANCH_NAME))
     push_branch(BRANCH_NAME)

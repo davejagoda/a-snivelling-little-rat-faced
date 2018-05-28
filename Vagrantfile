@@ -20,11 +20,15 @@ HEREDOC
 HOSTNAME = 'dulwich'
 VAGRANTFILE_API_VERSION = '2'
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.ssh.forward_agent = true
   config.vm.box = 'ubuntu/bionic64'
   config.vm.hostname = HOSTNAME
   config.vm.provider 'virtualbox' do |vb|
     vb.name = HOSTNAME
   end
+  config.vm.provision 'file', source: 'id_rsa',
+                      destination: '.ssh/id_rsa'
+  config.vm.provision 'file', source: 'id_rsa.pub',
+                      destination: '.ssh/id_rsa.pub'
   config.vm.provision 'shell', inline: SCRIPT
+  config.vm.synced_folder '.', '/vagrant', disabled: true
 end
