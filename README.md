@@ -14,7 +14,7 @@ vagrant up
 
 ```
 vagrant ssh
-cd /vagrant/
+cd a-snivelling-little-rat-faced/
 pipenv run ./hello_dulwich.py
 pipenv run ./prepare_repo.py
 pipenv run ./update_log_and_push.py
