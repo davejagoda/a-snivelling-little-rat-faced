@@ -14,7 +14,7 @@ pip3 install pipenv
 
 # pipenv install and add github SSH key to avoid warning
 su - vagrant -c 'cd /vagrant && pipenv install'
-su - vagrant -c 'ssh -o "StrictHostKeyChecking no" -T git@github.com'
+su - vagrant -c 'ssh -o "StrictHostKeyChecking no" -T git@github.com || true'
 HEREDOC
 
 HOSTNAME = 'dulwich'

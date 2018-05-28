@@ -11,8 +11,8 @@ def branch_exists(branch_name):
     return False
 
 def create_branch(branch_name):
-    porcelain.branch_create(REPO_PATH, BRANCH_NAME)
-    print('branch {} created'.format(BRANCH_NAME))
+    porcelain.branch_create(REPO_PATH, branch_name)
+    print('branch {} created'.format(branch_name))
 
 if '__main__' == __name__:
     if branch_exists(BRANCH_NAME):
