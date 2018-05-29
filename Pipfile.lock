@@ -3,19 +3,6 @@
         "hash": {
             "sha256": "64860c28a3a4dfde0c4f33bd9b41ca6b9103d219fc9a3d7019ec1aebf1682429"
         },
-        "host-environment-markers": {
-            "implementation_name": "cpython",
-            "implementation_version": "3.6.5",
-            "os_name": "posix",
-            "platform_machine": "x86_64",
-            "platform_python_implementation": "CPython",
-            "platform_release": "4.4.0-98-generic",
-            "platform_system": "Linux",
-            "platform_version": "#121-Ubuntu SMP Tue Oct 10 14:24:03 UTC 2017",
-            "python_full_version": "3.6.5",
-            "python_version": "3.6",
-            "sys_platform": "linux"
-        },
         "pipfile-spec": 6,
         "requires": {
             "python_version": "3.6"
@@ -30,15 +17,24 @@
     },
     "default": {
         "certifi": {
-            "hashes": [],
+            "hashes": [
+                "sha256:13e698f54293db9f89122b0581843a782ad0934a4fe0172d2a980ba77fc61bb7",
+                "sha256:9fa520c1bacfb634fa7af20a76bcbd3d5fb390481724c597da32c719a7dca4b0"
+            ],
             "version": "==2018.4.16"
         },
         "dulwich": {
-            "hashes": [],
+            "hashes": [
+                "sha256:c51e10c260543240e0806052af046e1a78b98cbe1ac1ef3880a78d2269e09da4"
+            ],
+            "index": "pypi",
             "version": "==0.19.2"
         },
         "urllib3": {
-            "hashes": [],
+            "hashes": [
+                "sha256:06330f386d6e4b195fbfc736b297f58c5a892e4440e54d294d7004e3a9bbea1b",
+                "sha256:cc44da8e1145637334317feebd728bd869a35285b93cbb4cca2577da7e62db4f"
+            ],
             "version": "==1.22"
         }
     },
